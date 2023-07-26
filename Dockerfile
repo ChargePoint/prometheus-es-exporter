@@ -1,4 +1,8 @@
-FROM python:3.8-slim
+FROM python:3.11.4-alpine3.18
+
+RUN apk update \
+ && apk upgrade \
+ && rm -rf /var/cache/apk/*
 
 WORKDIR /usr/src/app
 
